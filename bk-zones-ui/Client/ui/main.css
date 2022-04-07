@@ -1,0 +1,66 @@
+@font-face {
+    font-family: Box;
+    src: url(/Client/ui/BoxedRound.ttf);
+}
+body {
+    overflow: hidden;
+}
+*
+{
+    font-family: Box;
+    user-select: none;
+}
+
+.container {
+    position: absolute;
+    min-width: 10vw;
+    max-width: 16vw;
+    height: 7vw;
+    right: 3vw;
+    bottom: 2vw;
+}
+.zone {
+    color: rgb(200, 211, 40);
+    text-align: center;
+    font-size: .8vw;
+    background-color: rgb(86, 96, 126);
+    padding: .5vw;
+    border-bottom: .2vw solid #ccc;
+    border-radius: .4vw;
+}
+.desc {
+    margin-top: .4vw;
+    background-color: rgb(86, 96, 126);
+    box-shadow: 0 0 1vw .3vw rgba(0, 0, 0, 0.311);
+    color: #ccc;
+    padding: .5vw;
+    font-size: .7vw;
+    border-radius: .4vw;
+    text-transform: uppercase;
+}	
+.show {
+    animation: show .6s forwards;
+}
+.hide {
+    animation: hide .3s forwards;
+}
+@keyframes show {
+    0% {
+        opacity: 0;
+        transform: translateX(20vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes hide {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(20vw);
+    }
+}
